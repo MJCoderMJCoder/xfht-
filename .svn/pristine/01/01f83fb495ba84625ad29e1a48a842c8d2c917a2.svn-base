@@ -1,0 +1,16 @@
+#filepath_webapps=http://172.31.0.247:8080
+#project_path=http://172.31.0.247
+#project_port=8000
+#img_path=E\:\\testfzx.jpg
+#stranger_db_name=\u964C
+#WORK_TIME_FILE=workTime.xml
+#student_faceDB_id=10060
+#building_id=1
+#real_path=D\:\\DHT\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp1\\wtpwebapps\\ssrxsb
+#student_faceDB_id=10060
+police_faceDB_id=10207
+suspect_faceDB_id=10208
+follow_faceDB_id=10209
+tomcat_path=C\:\\SoftWare\\apache-tomcat-7.0.82
+pagecount=10
+ocrPath=F:\\Tesseract-OCR

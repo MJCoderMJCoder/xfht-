@@ -1,0 +1,105 @@
+package com.cxgc.front.model;
+ 
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+ 
+@Entity
+@Table(name = "t_helptype", catalog = "mysql")
+public class THelpType implements java.io.Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
+	private THelpType fid;
+	private String name;
+	private String data1;
+	private String data2;
+	private Set<THelpType> childs=new LinkedHashSet<THelpType>();  
+
+	public THelpType() {
+	}
+
+	public THelpType(THelpType fid, String name, String data1, String data2) {
+		this.fid = fid;
+		this.name = name;
+		this.data1 = data1;
+		this.data2 = data2;
+	}
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY) 
+	@Column(name = "id", unique = true, nullable = false)
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+ 
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)  
+    @JoinColumn(name = "fid")  
+	public THelpType getFid() {
+		return this.fid;
+	}
+
+	public void setFid(THelpType fid) {
+		this.fid = fid;
+	}
+
+	@Column(name = "name", length = 256)
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Column(name = "data1", length = 256)
+	public String getData1() {
+		return this.data1;
+	}
+
+	public void setData1(String data1) {
+		this.data1 = data1;
+	}
+
+	@Column(name = "data2", length = 256)
+	public String getData2() {
+		return this.data2;
+	}
+
+	public void setData2(String data2) {
+		this.data2 = data2;
+	}
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "fid", fetch = FetchType.EAGER)
+	public Set<THelpType> getChilds() {
+		return childs;
+	}
+
+	public void setChilds(Set<THelpType> 	childs) {
+		this.childs = childs;
+	}
+
+	 
+	
+	
+}

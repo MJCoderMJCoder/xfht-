@@ -1,0 +1,23 @@
+# WebService接口地址
+#webserviceAddress=http://222.168.43.87:9191/IdFaceAuth/IdAuthService?wsdl
+#数据库地址
+url = jdbc:mysql://10.112.69.16:3316/pki?useUnicode=true&amp;characterEncoding=utf-8
+#数据库用户名
+username = root
+#数据库密码
+#password = 1234
+password = faceroot123
+#此定时任务延时执行秒数
+delay = 0
+#此定时任务每次执行时间间隔（毫秒）
+intevalPeriod = 300000
+#每次抓数据库地址次数（不要轻易更改）
+count = 10
+#识别地址
+authURL=http://10.112.2.68:6180/MessageService
+#识别码
+appId=rxcjpt
+#类别
+attrType=all
+#ocr安装路径
+ocrPath=E:\\Tesseract-OCR

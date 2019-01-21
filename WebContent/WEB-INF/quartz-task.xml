@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"
+	default-lazy-init="false">
+	
+	<bean id="executor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"> 
+		<property name="corePoolSize" value="10" /> 
+		<property name="maxPoolSize" value="100" /> 
+		<property name="queueCapacity" value="500" />
+	</bean>
+	
+	
+	<!-- 生成静态页自动任务 -->
+	<!-- <bean id="staticChannelSiteJob" class="com.jeecms.cms.task.job.StaticChannelSiteJob"></bean>
+	<bean id="staticChannelSiteJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="staticChannelSiteJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="staticChannelSiteJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="staticChannelSiteJobDetail" />
+		<property name="cronExpression" value="0 0 0 * * ?" />
+		<property name="cronExpression" value="0 */1 * * * ?" />
+	</bean> -->
+	
+	<bean id="recordCheckWorkJob" class="com.cxgc.front.task.job.RecordCheckWork"></bean>
+	<bean id="recordCheckWorkJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="recordCheckWorkJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="recordCheckWorkJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="recordCheckWorkJobDetail" />
+		<property name="cronExpression" value="0 0 1 * * ?" />
+		<!-- <property name="cronExpression" value="0 */3 * * * ?" /> -->
+	</bean>
+	
+	<bean id="photoClassifyJob" class="com.cxgc.front.task.job.PhotoClassify"></bean>
+	<bean id="photoClassifyJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="photoClassifyJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="photoClassifyJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="photoClassifyJobDetail" />
+		<!-- <property name="cronExpression" value="0 */1 * * * ?" /> -->
+		<property name="cronExpression" value="0 0 */1 * * ?" />
+	</bean>
+	<!-- 调度器 -->
+    <bean name="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+       <!-- 通过applicationContextSchedulerContextKey属性配置spring上下文 -->    
+        <property name="applicationContextSchedulerContextKey">    
+            <value>applicationContext</value>    
+        </property>   
+        <property name="triggers">  
+			<list>  
+				<!-- <ref bean="recordCheckWorkJobTrigger" />  -->
+				<!-- <ref bean="staticChannelSiteJobTrigger" />   -->
+				<ref bean="photoClassifyJobTrigger" /> 
+			</list> 
+		</property> 
+    	<property name="taskExecutor" ref="executor" /> 
+   	</bean> 
+    
+    
+</beans>

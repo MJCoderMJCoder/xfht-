@@ -1,0 +1,84 @@
+package com.cxgc.front.model;
+
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "jc_guestbook_reason", catalog = "xfproject")
+public class GuestbookReason implements java.io.Serializable {
+	
+	private Integer id;
+	private Guestbook guestbook;
+	private User createUser;//录入人
+	private Integer status;//3、通过  4、驳回给录入人员
+	private Date createTime;//创建时间
+	private String reason;//原因
+	
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+	@Column(name = "id", unique = true, nullable = false, length = 11)
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	@ManyToOne(cascade=CascadeType.REFRESH,optional=false,fetch = FetchType.LAZY) 
+	@JoinColumn(name = "guestbook_id")
+	public Guestbook getGuestbook() {
+		return guestbook;
+	}
+	public void setGuestbook(Guestbook guestbook) {
+		this.guestbook = guestbook;
+	}
+	
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)  
+	@JoinColumn(name = "user_id")
+	public User getCreateUser() {
+		return createUser;
+	}
+
+	public void setCreateUser(User createUser) {
+		this.createUser = createUser;
+	}
+	
+	@Column(name = "status", length = 11)
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	
+	@Column(name = "create_time")
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	
+	@Column(name = "reason", length = 255)
+	public String getReason() {
+		return reason;
+	}
+	
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+	
+}

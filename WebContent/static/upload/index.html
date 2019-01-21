@@ -1,0 +1,37 @@
+
+
+<html>
+
+<head>
+<script language="javascript" type="text/javascript">
+	function add() {
+		 var temp_DSign_Result;
+		var Auth_Content = 'ccpfbs';
+		var InitParam = "<?xml version=\"1.0\" encoding=\"gb2312\"?><authinfo><liblist><lib type=\"CSP\" version=\"1.0\" dllname=\"\" ><algid val=\"SHA1\" sm2_hashalg=\"sm3\"/></lib><lib type=\"SKF\" version=\"1.1\" dllname=\"SERfR01DQUlTLmRsbA==\" ><algid val=\"SHA1\" sm2_hashalg=\"sm3\"/></lib><lib type=\"SKF\" version=\"1.1\" dllname=\"U2h1dHRsZUNzcDExXzMwMDBHTS5kbGw=\" ><algid val=\"SHA1\" sm2_hashalg=\"sm3\"/></lib><lib type=\"SKF\" version=\"1.1\" dllname=\"U0tGQVBJLmRsbA==\" ><algid val=\"SHA1\" sm2_hashalg=\"sm3\"/></lib></liblist></authinfo>";
+
+		JITDSignOcx.Initialize(InitParam);
+
+		JITDSignOcx.SetCertChooseType(1);
+		JITDSignOcx.SetCert("SC", "", "", "", "", "");
+		if (JITDSignOcx.GetErrorCode() != 0) {
+			return "no1:"+JITDSignOcx.GetErrorCode();
+			//JITDSignOcx.Finalize();
+			//return false;
+		} else {
+			temp_DSign_Result = JITDSignOcx.DetachSignStr("",Auth_Content);
+			if (JITDSignOcx.GetErrorCode() != 0) {
+				return "no2:"+JITDSignOcx.GetErrorCode();
+				//JITDSignOcx.Finalize();
+				//return false;
+			}
+			return temp_DSign_Result;
+		}   
+		/*  return "aa"; */
+	}
+</script>
+
+</head>
+<body>
+	<object id="JITDSignOcx" codeBase="./JITComVCTK_S.cab#version=2,1,0,3" classid="clsid:B0EF56AD-D711-412D-BE74-A751595F3633"></object>
+</body>
+</html>

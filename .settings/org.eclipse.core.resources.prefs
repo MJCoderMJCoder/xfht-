@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/page/index.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/index2.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/login.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/publicVoiceRegister/visitingRegistration/add.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/publicVoiceRegister/visitingRegistration/distinguish.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/user/list.jsp=UTF-8
+encoding//resources/common.properties=ISO-8859-1
+encoding//src/com/cxgc/front/config/config.properties=UTF-8
+encoding/<project>=UTF-8

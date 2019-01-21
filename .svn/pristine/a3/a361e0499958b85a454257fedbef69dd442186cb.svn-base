@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.bg_block { display: none; width: 100%; height: 100%; background: url(../images/black_bg.png); top: 0; left: 0; padding-top: 180px; z-index: 99; position: fixed!important;/*FF IE7*/ position: absolute; /*IE6*/ _top:expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/ }
+.bg_blockfzx { display: block; width: 100%; height: 100%; background: url(../images/black_bg.png); top: 0; left: 0; padding-top: 180px; z-index: 99; position: fixed!important;/*FF IE7*/ position: absolute; /*IE6*/ _top:expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/ }
+
+
+/* 弹出层大小 */
+.s_tcc { width:460px; min-height: 360px; background:#fff; margin: 0 auto; }/* 小弹出层 */
+.b_tcc { width:720px; max-height: 600px; background:#fff; margin: 0 auto; }/* 大弹出层 */
+.t_tcc { width:280px; min-height: 190px; background:#fff; margin: 0 auto; border-radius:5px; }/* 弹出提示 */
+
+.title_close_btn { float:right; width:20px; height:26px; background:url(../images/tc_title_close.png) center no-repeat;}
+.tcc_title { padding:7px 10px 7px 40px; background:#2a7ad3; font: 16px/26px "微软雅黑"; color: #fff;}
+.tcc_title_add { background:url(../images/tc_title_add.png) 15px center no-repeat #2a7ad3; }
+.tcc_title_zl { background:url(../images/tc_title_zl.png) 15px center no-repeat #2a7ad3; }
+.tcc_w { width: 100%; padding:20px 0 }
+
+/* 弹出提示 */
+.ts_img { padding:5px; text-align:center;}
+.ts_txt { text-align:center; font:16px/28px "微软雅黑"; color:#333;padding-bottom: 6px;}
+.ts_txt span { font:12px/30px "微软雅黑"; color:#aaa;}
+.tc_btn { text-align:center;}
+.tc_btn input { width:98px; height:24px; border:none; border-radius:3px; background:#ccc; color:#fff; margin:0 15px}
+.tc_btn input.tc_btn_org { background:#ffcd6c;}
+.tc_btn input.tc_btn_green { background:#009946;}
+
+/* 小弹出层 */
+.s_tcc .tc_tab { width:420px; margin:auto; padding-bottom:20px;}
+.b_tcc .tc_tab { width:680px; margin:auto; padding-bottom:20px;max-height: 480px;overflow: auto }
+.tc_tab td { line-height:25px; padding: 5px; font:14px/20px "微软雅黑"; color:#999; }
+.tc_tab td.table_grey { color:#666; }
+.tc_tab td input ,.tc_tab td select ,.tc_tab td textarea  { width:85%;height:25px;ine-height:25px;font:14px/25px "微软雅黑"; color:#999; }
+.tc_tab td textarea { width:92%; height: 68px; }
+.tc_tab_photo { width:100%; text-align:center;}
+.tc_tab_photo img { max-width:90%; max-height:90%; }
+
+/* 17.12.18 追加 */
+td.table_grey2 { text-align:center; background: #f6f6f6; color:#666;}
+.table_list_2 {padding-left: 36px !important;background: url(../images/tab_list_cj.png) 20px center no-repeat;}
+.table_list_3 {padding-left: 56px !important;background: url(../images/tab_list_cj.png) 40px center no-repeat;}
+.table_list_ppg p{padding-left:10px !important;}
+.table_list_ppg2 p{padding-left:40px !important;;}
+.table_list_ppg3 p{padding-left:70px !important;;}

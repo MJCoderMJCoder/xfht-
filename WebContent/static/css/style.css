@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*初始化*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin: 0; padding: 0;}
+body,input,select,textarea{font-size:12px;font-family:"微软雅黑"; color:#000;}
+table{border-collapse: collapse;border-spacing: 0;}
+fieldset,img{border: 0;}
+address,caption,cite,code,dfn,em,th,var{font-style: normal; font-weight: normal;}
+li{list-style: none;}
+/*caption,th{ text-align: left;}*/
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+q:before,q:after{content: '';}
+abbr,acronym{border: 0; font-variant: normal;}
+sup,sub{vertical-align: text-top;}
+sub{vertical-align: text-bottom;}
+a{ text-decoration:none; color:#333;font-size:12px;}
+a:hover{text-decoration:none;}
+/*input:focus{outline: none;}
+textarea:focus{outline:none;}*/
+button:focus{ outline:none;}
+/*select:focus{outline:none;}*/
+.clear{ clear:both;}
+.fl {float: left;}
+.fr {float: right;}
+.break-word { word-wrap: break-word; break-word: break-all; }/* 折行 */
+.slh{overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;}/*省略号*/
+
+/* 常用字体颜色 */
+.white{color:#FFFFFF;}
+.white a{ text-decoration:none; color:#FFFFFF; font-size:12px;}
+.white a:hover{text-decoration:underline;}
+.black{color:#000000;}
+.gray{color:#777;}
+.red{color:#FF0000;}
+.crimson{color:#de0000;}
+.blue a{color:#1e70bb;text-decoration: none;}
+.blue a:hover{text-decoration: underline;color:#ff6700;}
+.golden{color:#fa6500;}
+.green{ color:#22532f;}
+/* 常用字号 */
+.f0{font-size:0px;}
+.f12{font-size:12px;}
+.f12 a{color:#ffffff;text-decoration: none;}
+.f12 a:hover{text-decoration: underline;color:#ff6700;}
+.f14{font-size:14px;}
+.f15{font-size:15px;}
+.f16{font-size:16px;}
+.f22{font-size:22px;}
+.f24{font-size:24px;}
+
+/* 常用格式 */
+.JuZhong{margin:0 auto;}
+.Jushang{margin-top:10px;}
+.Txt_center{text-align:center;}
+.Txt_left{text-align:left;}
+.Txt_right{text-align:right;}
+.Txt_cu{ font-weight:bold;}
+

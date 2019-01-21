@@ -1,0 +1,76 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,html{height:100%;min-width:1200px;}
+/*正文*/
+.top{width:100%;height:70px;background:#0d48a3 url( ) no-repeat right top;}
+.top-login{float:left;padding-left:36px;}
+.top-login p{float:left;width:460px;font-size:28px;color:#fff;height:70px;line-height:70px;padding-left:50px;background:url(../images/index_logo.png) no-repeat left center;}
+.top-login p span{font-size:14px;padding-left:10px;height:70px;line-height:70px;color: #819ac0;}
+.top-nav{float:right;padding-right: 20px;}
+.top-nav li{float:left;height:70px;line-height:70px;}
+.top-nav li a{display:block;text-align:center;}
+.top-nav li img{padding-top:26px;display:block;float:left;}
+.admin{padding-right: 30px }
+.admin_img{padding-top: 15px !important}
+.top-nav li span{display:block;height:70px;float:left;line-height:70px;color:#fff;font-size:14px;padding:0 9px;}
+.news{padding:0 30px;position:relative;}
+.news-cli{width:24px;height:24px;line-height:24px;font-size:12px;color:#fff;position:absolute;top:16px;left:38px;background:url(../images/index_xiaox_diani.png) no-repeat center;}
+.news_xiala{height: 60px;background: #0d48a3;position: absolute;top: 70px;left: 0;width:120px;display: none;z-index: 999}
+.news_xiala li{width: 120px;height:30px;line-height: 30px;}
+.news_xiala li:hover{background: #0e51b7}
+.news_xiala li a{color: #fff;font-size: 12px;}
+.signout{padding-left:20px;}
+
+/*导航*/
+.top_nav ul{height: 100px;background: #0d6ad6;padding-left: 26px;}
+.top_nav ul li{float: left;width: 144px;height: 78px;padding-top: 22px;background: url(../images/top_nav_border.png) right center no-repeat;}
+.top_nav ul li:last-child{background: none;}
+.top_nav ul li:hover{width: 142px; background: #0a5ec1;border-left: 1px solid #0b5cbc;border-right: 1px solid #0b5cbc;}
+.top_nav ul li a{display: block;height: 20px;width: 144px;text-align: center;font-size: 18px;color: #fff;padding-top: 40px;}
+.top_nav_01{background: url(../images/index_01.png) no-repeat top center;}
+.top_nav_02{background: url(../images/index_02.png) no-repeat top center;}
+.top_nav_03{background: url(../images/index_03.png) no-repeat top center;}
+.top_nav_04{background: url(../images/index_04.png) no-repeat top center;}
+.top_nav_05{background: url(../images/index_05.png) no-repeat top center;}
+.top_nav_06{background: url(../images/index_06.png) no-repeat top center;}
+.top_nav_07{background: url(../images/index_07.png) no-repeat top center;}
+
+
+/*框架*/
+.center{height:100%;overflow: auto;background: #f6f9fe}
+.pubilc_left{width:14.5%;float:left;height:100%;background:#4c91ef;overflow:auto;}
+.pubilc_right{width:85.5%;float:left;height:100%;overflow:hidden;background:#f6f9fe;overflow:auto;position: relative;}
+/* 左侧列表 */
+.public_tittle{font-size:20px;height:54px;line-height:54px;padding-left: 10%; color:#FFFFFF;background:url(../images/left_list_beijing.png) repeat-x;font-weight: bold;}
+.public_tittle span{text-transform: uppercase;font-size:14px;font-weight: normal}
+.public_tittle img{padding-right:10px;vertical-align:middle;}
+.left_nav_list{}
+.left_nav_list h3{height:48px;padding-left:10%;font:normal 14px/48px "微软雅黑";color:#FFFFFF;cursor:pointer;}
+/* 一级导航 */
+.left_nav_list h3 a{font:normal 14px/48px "微软雅黑";color:#FFFFFF;border-left: 2px solid #fff;padding-left: 15%;}
+
+/* 无子菜单 一级导航 */
+.left_nav_list .nav_on:hover h3{background:#3982e4 url(../images/left_jiantou.png) no-repeat 90% center;}
+
+/* 焦点状态下 一级导航 */
+.left_nav_list h3:hover a{color:#FFFFFF;}
+/* 焦点状态下 无子菜单 一级导航 */
+.left_nav_list ul{color:#fff;display:none;/* 默认都隐藏 */
+ padding:10px 0;}
+.left_nav_list ul li{height:42px;margin-left:16%;border-left:1px solid #1f5cb1;}
+.left_nav_list ul li a{display:block;height:42px;margin-left:-1px;}
+/* 二级导航 */
+.left_nav_list ul li a span{display:block;font:14px/42px "微软雅黑";color:#FFFFFF;border-left:1px solid #1f5cb1;padding-left:16px;}
+/* 二级导航 */
+.left_nav_list ul li a:hover span{border-left:1px solid #4efeff;}
+
+/*右侧*/
+.pubilc_right_cn{padding:1.7% }
+
+#calendar { padding-top:20px;}
+
+#ContainerPanel td { height:auto !important; border:none; line-height:20px;text-align:center;padding:3px 0;}
+#ContainerPanel select { width:auto !important; height:auto !important; background:none; min-width: inherit; border: none;}
+#input-datetime { position:relative;}
+
